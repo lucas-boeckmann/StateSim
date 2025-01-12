@@ -35,109 +35,103 @@
 
     <div class="BtnDiv">
       <a href="Index.html">
-          <button type="button" id="ConstiBtn" class="btn btn-dark btn-lg"
+          <button type="button" class="btn btn-dark btn-lg"
           data-bs-toggle="tooltip" data-bs-placement="top"
           data-bs-custom-class="custom-tooltip"
           data-bs-title="Gerencie a principal lei de uma nação, a Constituição.">Constituição</button></a>
-      <a href="Regulamentos.html">
-          <button type="button" id="RegulaBtn" class="btn btn-dark btn-lg"
+      <a href="Politicas.html">
+          <button type="button" class="btn btn-dark btn-lg"
           data-bs-toggle="tooltip" data-bs-placement="top"
           data-bs-custom-class="custom-tooltip"
-          data-bs-title="Gerencie as leis que impoem regras na população.">Regulamentos</button></a>
-      <a href="Impostos.html">
+          data-bs-title="Gerencie as políticas nacionais.">Politicas</button></a>
+      <a href="Orçamento.html">
+        <button type="button" class="btn btn-dark btn-lg"
+        data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="Gerencie o orçamento das principais políticas.">Orçamento</button></a>
+      <a href="Mapa.html">
           <button type="button" id="ImpostoBtn" class="btn btn-dark btn-lg"
           data-bs-toggle="tooltip" data-bs-placement="top"
           data-bs-custom-class="custom-tooltip"
-          data-bs-title="Cobre imposotos da população como uma forma de arrecadar dinheiro para o Governo.">Impostos</button></a>
-      <a href="Ministerios.html">
-        <button type="button" id="RegulaBtn" class="btn btn-dark btn-lg"
-        data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="Gerencie Ministérios, Secretarias ou Estatais para organizar a administração ou determinadas funções do Governo.">Ministérios, Secretarias e Estatais</button></a>
-      <a href="ServiçosSociais.html">
-        <button type="button" id="RegulaBtn" class="btn btn-dark btn-lg"
-        data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="Garanta alguns serviços do Governo que ajudam quem está sem dinheiro e ajudam a eliminar a probreza.">Serviços Sociais</button></a>
-      <a href="ServiçosEconomicos.html">
-        <button type="button" id="RegulaBtn" class="btn btn-dark btn-lg"
-        data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="Gerencie serviços que afetam diretamente a economia.">Serviços Econômicos</button></a>
-      <a href="OutrosServiços.html">
-        <button type="button" id="RegulaBtn" class="btn btn-dark btn-lg"
-        data-bs-toggle="tooltip" data-bs-placement="top"
-        data-bs-custom-class="custom-tooltip"
-        data-bs-title="Gerencie alguns outros serviços de diversas categorias, mas que estão nessa categoria por não serem muitos.">Outros serviços</button></a>
+          data-bs-title="Observe o mapa e pratique um pouquinho de imperialismo!.">Mapa</button></a>
   </div>
 
   <div class="MainDiv">
       
     <div class="MiniDiv">
+      <label for="NomePaís" class="form-label">Nome do país</label>
       <input type="text" class="form-control" id="NomePaís" placeholder="Nome do País (Escreva nada para nenhum)">
     </div>
       <div class="MiniDiv">
+        <label for="Direitos" class="form-label">Quantidade de direitos dos cidadãos definidos pelo Governo</label>
         <select class="form-select" id="Direitos" aria-label="Direitos">
-          <option value="0" selected>Quantidade de direitos dos cidadãos definidos pelo Governo (Marque nada para nenhum)</option>
+          <option value="0" selected>Nenhum</option>
           <option value="1">Poucos Direitos</option>
           <option value="2">Alguns Direitos</option>
           <option value="3">Muitos Direitos</option>
         </select>
       </div>
       <div class="MiniDiv">
+        <label for="Regime" class="form-label">Regime</label>
         <select class="form-select" id="Regime" aria-label="Regime">
-          <option selected>Regime (Marque nada para nenhum)</option>
-          <option value="1">Democracia Direta</option>
-          <option value="2">Democracia Indireta</option>
-          <option value="3">Oligarquia</option>
-          <option value="4">Aristocracia</option>
-          <option value="5">Tecnocracia</option>
-          <option value="6">Teocracia</option>
+          <option value="1" selected>Anarquia</option>
+          <option value="2">Democracia Direta</option>
+          <option value="3">Democracia Indireta</option>
+          <option value="4">Autocracia + Aristocracia</option>
+          <option value="5">Aristocracia</option>
+          <option value="6">Oligarquia</option>
+          <option value="7">Tecnocracia</option>
+          <option value="8">Teocracia</option>
+          <option value="9">Autocracia</option>
         </select>
       </div>
       <div class="MiniDiv">
+        <label for="Sistema" class="form-label">Sistema</label>
         <select class="form-select" id="Sistema" aria-label="Sistema">
-          <option selected>Sistema (Marque nada para nenhum)</option>
+          <option selected>Nenhum</option>
           <option value="1">Presidencialismo</option>
           <option value="2">Semipresidencialismo</option>
           <option value="3">Parlamentarismo</option>
-          <option value="4">Autocracia</option>
         </select>
       </div>
       <div class="MiniDiv">
+        <label for="Organização" class="form-label">Organização</label>
         <select class="form-select" id="Organização" aria-label="Organização">
-          <option selected>Organização (Marque nada para nenhum)</option>
+          <option selected>Nenhum</option>
           <option value="1">Federação</option>
           <option value="2">Confederação</option>
           <option value="3">Estado Único</option>
+          <option value="4">Estado Único + Municipalismo</option>
+          <option value="5">Federação + Municipalismo</option>
         </select>
       </div>
       <div class="MiniDiv">
+        <label for="Título" class="form-label">Título</label>
         <select class="form-select" id="Título" aria-label="Título">
-          <option selected>Título (Marque nada para nenhum)</option>
+          <option selected>Anarquia</option>
           <option value="1">República</option>
-          <option value="2">Monarquia</option>
+          <option value="2">Reino</option>
+          <option value="3">Império</option>
+          <option value="4">Estado</option>
+          <option value="5">Comuna</option>
         </select>
       </div>
       <div class="MiniDiv">
-        <select class="form-select" id="IdeologiaEconomica" aria-label="IdeologiaEconomica">
-          <option selected>Ideologia Econômica (Marque nada para nenhum)</option>
-          <option value="1">Capitalismo</option>
-          <option value="2">Capitalismo de Estado</option>
-          <option value="3">Socio-Capitalismo</option>
-          <option value="4">Socialismo Científico</option>
-          <option value="5">Socialismo Utópico</option>
-          <option value="5">Socialismo Autogestionado</option>
-          <option value="6">Comunismo Marxista</option>
-          <option value="7">Comunismo Maoista</option>
-          <option value="8">Comunismo Leninista</option>
-          <option value="9">Nacional Socialismo (Nazismo)</option>
+        <label for="Corporativismo" class="form-label">Corporativismo</label>
+        <select class="form-select" id="corporativismo" aria-label="Corporativismo">
+          <option value="0" selected>Nenhum</option>
+          <option value="1">Conselhos corporativos estatais</option>
+          <option value="2">Orgãos corporativos estatais</option>
+          <option value="3">Sindicatos regulados</option>
+          <option value="4">Democracia Orgânica</option>
+          <option value="5">Ministério do trabalho</option>
         </select>
       </div>
       <div class="MiniDiv">
-        <input type="text" class="form-control" id="IdeologiaSocial" placeholder="Ideologia Social (Escreva nada para nenhuma)">
+        <label for="Ideologia" class="form-label">Ideologia</label>
+        <input type="text" class="form-control" id="Ideologia" placeholder="Ideologia (Escreva nada para nenhuma)">
       </div>
-      <div class="MiniDiv">
+      <div class="SubmitDiv">
         <button onclick="Submit()" class="btn btn-dark">Enviar</button>
       </div>
     </div>

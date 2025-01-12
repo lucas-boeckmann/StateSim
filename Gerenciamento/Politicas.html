@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StateSim</title>
+    <link rel="stylesheet" href="../Style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+<body data-bs-theme="dark">
+  <nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">StateSim</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="nav nav-tabs">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="Index.html">Gerenciamento</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="Info.html">Informações</a>
+          </li>
+        </ul>
+        <ul class="nav justify-content-end">
+          <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" role="switch" id="LightModeSwitch">
+            <label class="form-check-label" for="flexSwitchCheckDefault">Light mode</label>
+          </div>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <div class="BtnDiv">
+    <a href="Index.html">
+        <button type="button" class="btn btn-dark btn-lg"
+        data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="Gerencie a principal lei de uma nação, a Constituição.">Constituição</button></a>
+    <a href="Politicas.html">
+        <button type="button" class="btn btn-dark btn-lg"
+        data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="Gerencie as políticas nacionais.">Politicas</button></a>
+    <a href="Orçamento.html">
+      <button type="button" class="btn btn-dark btn-lg"
+      data-bs-toggle="tooltip" data-bs-placement="top"
+      data-bs-custom-class="custom-tooltip"
+      data-bs-title="Gerencie o orçamento das principais políticas.">Orçamento</button></a>
+    <a href="Mapa.html">
+        <button type="button" id="ImpostoBtn" class="btn btn-dark btn-lg"
+        data-bs-toggle="tooltip" data-bs-placement="top"
+        data-bs-custom-class="custom-tooltip"
+        data-bs-title="Observe o mapa e pratique um pouquinho de imperialismo!.">Mapa</button></a>
+</div>
+    <div class="MainDiv">
+          <div class="question">
+            <label for="TrataCriminoso" class="form-label">Rigidez do tratamento com criminosos</label>
+            <select class="form-select" id="TrataCriminoso" placeholder="Nenhum">
+              <option value="1">Baixo</option>
+              <option value="2">Médio</option>
+              <option value="3">Médio com trabalho prisional</option>
+              <option value="4">Alto com trabalho prisional</option>
+            </select> 
+          </div>
+          <div class="question">
+            <label for="LeisPrincipais" class="form-label">Quantida de proibições e regulações</label>
+            <select class="form-select" id="LeisPrincipais" placeholder="Nenhum">
+              <option value="1">Baixo</option>
+              <option value="2">Médio</option>
+              <option value="3">Alto</option>
+            </select> 
+          </div>
+          <div class="question">
+            <label for="ImuniParla" class="form-label">Imunidade Parlamentar</label>
+            <select class="form-select" id="ImuniParla" placeholder="Nenhum">
+              <option value="0">Nenhuma</option>
+              <option value="1">Baixo</option>
+              <option value="2">Médio</option>
+              <option value="3">Alto</option>
+            </select> 
+          </div>
+          <div class="question">
+            <label for="SalarioMinimo" class="form-label">Salário Mínimo</label>
+            <select class="form-select" id="SalarioMinimo" placeholder="Nenhum">
+              <option value="0">Nenhuma</option>
+              <option value="1">Baixo</option>
+              <option value="3">Médio</option>
+              <option value="5">Alto</option>
+            </select> 
+          </div>
+          <div class="question">
+            <label for="MaiorPenal" class="form-label">Maioridade Penal</label>
+            <select class="form-select" id="MaiorPenal" placeholder="Nenhum">
+              <option value="1">Nenhuma</option>
+              <option value="2">A partir de 10 anos</option>
+              <option value="3">A partir de 16 anos</option>
+              <option value="4">A partir de 18 anos</option>
+              <option value="5">A partir de 20 anos</option>
+            </select> 
+          </div>
+          <div class="question">
+            <label for="LeisProg" class="form-label">Leis Repressivas/Progressistas</label>
+            <select class="form-select" id="LeisProg" placeholder="Nenhum">
+              <option value="-2">Muitas leis progressistas (Ex.: Mais cotas e transição de gênero para crianças)</option>
+              <option value="-1">Algumas leis progressistas (Ex.: Cotas, desarmamentismo)</option>
+              <option value="0">Nenhuma</option>
+              <option value="1">Repressão ao progressismo</option>
+              <option value="2">Repressão a homossexualidade</option>
+              <option value="3">Eugenia</option>
+              <option value="4">Extermínio de etinias</option>
+              </select> 
+            </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibAborto" autocomplete="off">
+            <label class="btn" for="ProibAborto">Proibição do Aborto</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibMaco" autocomplete="off">
+            <label class="btn" for="ProibMaco">Proibição da Maconha</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibDro" autocomplete="off">
+            <label class="btn" for="ProibDro">Proibição de outras Drogas Ilícitas</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="Reflo" autocomplete="off">
+            <label class="btn" for="Reflo">Leis ambientalistas</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="EstaLai" autocomplete="off">
+            <label class="btn" for="EstaLai">Estado laico</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibAzar" autocomplete="off">
+            <label class="btn" for="ProibAzar">Proibição de jogos de azar</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibOpo" autocomplete="off">
+            <label class="btn" for="ProibOpo">Proibição de oposição política</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="Censura" autocomplete="off">
+            <label class="btn" for="Censura">Censura de mídia</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="LeiMarcial" autocomplete="off">
+            <label class="btn" for="LeiMarcial">Lei Marcial</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="PenaMorte" autocomplete="off">
+            <label class="btn" for="PenaMorte">Pena de Morte</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="Disciplina" autocomplete="off">
+            <label class="btn" for="Disciplina">Disciplina obrigatória nas instituições de ensino</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibReli" autocomplete="off">
+            <label class="btn" for="ProibReli">Proibição da religião</label>
+          </div>
+          <div class="MiniDiv question">
+            <input type="checkbox" class="btn-check" id="ProibReliEsp" autocomplete="off">
+            <label class="btn" for="ProibReliEsp">Proibição de religiões Específicas</label>
+          </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisEconomia" autocomplete="off">
+              <label class="btn" for="MinisEconomia">Ministério da econômia</label>
+            </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisSaúde" autocomplete="off">
+              <label class="btn" for="MinisSaúde">Ministério da saúde</label>
+            </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisEduca" autocomplete="off">
+              <label class="btn" for="MinisEduca">Ministério da educação</label>
+            </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisSegura" autocomplete="off">
+              <label class="btn" for="MinisSegura">Ministério da segurança</label>
+            </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisCiência" autocomplete="off">
+              <label class="btn" for="MinisCiência">Ministério da ciência e desenvolvimento</label>
+            </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisDefesa" autocomplete="off">
+              <label class="btn" for="MinisDefesa">Ministério da defesa/guerra</label>
+            </div>
+            <div class="MiniDiv question">
+              <input type="checkbox" class="btn-check" id="MinisPropaganda" autocomplete="off">
+              <label class="btn" for="MinisPropaganda">Ministério da propaganda</label>
+            </div>
+            <div class="question">
+              <label for="MinisteriosEx" class="form-label">Quantidade de ministérios "extras"</label>
+              <select class="form-select" id="MinisteriosEx" placeholder="Nenhum">
+                <option value="0">Nenhum</option>
+                <option value="1">Baixo (ex.: Ministério da cultura, agricultura, diplomacia, industria e etc.)</option>
+                <option value="2">Médio (ex.: Ministério da aeronáutica, trabalho, energia, esporte e etc.)</option>
+                <option value="3">Alto (ex.: Ministério da mulher, direitos humanos, igualdade racial e etc.)</option>
+              </select>
+            </div>
+            <div class="question">
+              <label for="Estatais" class="form-label">Quantidade de estatais</label>
+              <select class="form-select" id="Estatais" placeholder="Nenhum">
+                <option value="0">Nenhuma</option>
+                <option value="1">Baixa (ex.: Estatais de mineração, petróleo ou outras de setores essenciais.)</option>
+                <option value="2">Média (ex.: Estatais de geração de energia, mineração, esporte e etc.)</option>
+                <option value="3">Alta (ex.: Estatais de transporte, metalurgia, comunicações e etc.)</option>
+              </select>
+            </div>
+          
+        <div class="MiniDiv question">
+          <input type="checkbox" class="btn-check" id="MercadoFechado" autocomplete="off">
+          <label class="btn" for="MercadoFechado">Mercados Fechados</label>
+        </div>
+        <div class="MiniDiv question">
+          <input type="checkbox" class="btn-check" id="Moeda" autocomplete="off">
+          <label class="btn" for="Moeda">Moeda sem lastro</label>
+        </div>
+        <div class="MiniDiv question">
+          <input type="checkbox" class="btn-check" id="Cambio" autocomplete="off">
+          <label class="btn" for="Cambio">Câmbio fixo da moeda</label>
+        </div>
+        <div class="MiniDiv question">
+          <input type="checkbox" class="btn-check" id="Cooperativas" autocomplete="off">
+          <label class="btn" for="Cooperativas">Forçar empresas a se tornarem cooperativas</label>
+        </div>
+        <div class="MiniDiv question">
+          <input type="checkbox" class="btn-check" id="Estatizar" autocomplete="off">
+          <label class="btn" for="Estatizar">Estatizar todas as empresas</label>
+        </div>
+
+      <div class="SubmitDiv">
+        <button onclick="Submit()" class="btn btn-dark">Enviar</button>
+      </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
+    <script src="../Politicas.js"></script>
+  </body>
+</html>
