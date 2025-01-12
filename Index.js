@@ -4,18 +4,19 @@ const regime = document.getElementById("Regime")
 const sistema = document.getElementById("Sistema")
 const organização = document.getElementById("Organização")
 const título = document.getElementById("Título")
-const ideoEconomica = document.getElementById("IdeologiaEconomica")
-const ideoSocial = document.getElementById("IdeologiaSocial")
+const ideo = document.getElementById("Ideologia")
+const corp = document.getElementById("corporativismo")
 
-nomeP.value = localStorage.getItem("NomeP")
-direitos.value = localStorage.getItem("Direitos")
-regime.value = localStorage.getItem("Regime")
-sistema.value = localStorage.getItem("Sistema")
-organização.value = localStorage.getItem("Organização")
-título.value = localStorage.getItem("Título")
-ideoEconomica.value = localStorage.getItem("IdeologiaEconomica")
-ideoSocial.value = localStorage.getItem("IdeoSocial")
-
+window.onload = function () {
+    nomeP.value = localStorage.getItem("NomeP") || null
+    direitos.value = localStorage.getItem("Direitos") || 1
+    regime.value = localStorage.getItem("Regime") || 1
+    sistema.value = localStorage.getItem("Sistema") || 1
+    organização.value = localStorage.getItem("Organização") || 1
+    título.value = localStorage.getItem("Título") || 1
+    ideo.value = localStorage.getItem("Ideologia") || null
+    corp.value = localStorage.getItem("corporativismo") || 0
+}
 function Submit() {
     localStorage.setItem("NomeP", nomeP.value)
     localStorage.setItem("Direitos", direitos.value)
@@ -23,6 +24,9 @@ function Submit() {
     localStorage.setItem("Sistema", sistema.value)
     localStorage.setItem("Organização", organização.value)
     localStorage.setItem("Título", título.value)
-    localStorage.setItem("IdeologiaEconomica", ideoEconomica.value)
-    localStorage.setItem("IdeoSocial", ideoSocial.value)
+    localStorage.setItem("Ideologia", ideo.value)
+    localStorage.setItem("corporativismo", corp.value)
+
+    alert("Jogo salvo!");
+
 }
